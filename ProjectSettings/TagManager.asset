@@ -8,6 +8,7 @@ TagManager:
   - TimesUp
   - HUD
   - Pause
+  - Enemy
   layers:
   - Default
   - TransparentFX
