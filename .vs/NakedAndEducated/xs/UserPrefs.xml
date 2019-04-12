@@ -1,8 +1,11 @@
 ﻿<Properties StartupConfiguration="{2B6495A6-E0DA-025A-3B21-CC311A603593}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_Scripts/CheckpointController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_Scripts/HUDController.cs">
     <Files>
-      <File FileName="Assets/_Scripts/CheckpointController.cs" Line="22" Column="10" />
+      <File FileName="Assets/_Scripts/CheckpointController.cs" Line="20" Column="6" />
       <File FileName="Assets/_Scripts/EnemyController.cs" Line="27" Column="10" />
+      <File FileName="Assets/_Scripts/PlayerStats.cs" Line="34" Column="55" />
+      <File FileName="Assets/_Scripts/HUDController.cs" Line="81" Column="35" />
+      <File FileName="../CSC458_Tutorial/Unity Project/Assets/HUDController.cs" Line="10" Column="5" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

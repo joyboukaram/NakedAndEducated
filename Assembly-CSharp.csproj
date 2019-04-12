@@ -64,7 +64,6 @@
     <Compile Include="Assets\_Scripts\CheckpointController.cs" />
     <Compile Include="Assets\_Scripts\ClockAnim.cs" />
     <Compile Include="Assets\_Scripts\EnemyController.cs" />
-    <Compile Include="Assets\_Scripts\GameOverScene.cs" />
     <Compile Include="Assets\_Scripts\HUDController.cs" />
     <Compile Include="Assets\_Scripts\IntroScene.cs" />
     <Compile Include="Assets\_Scripts\PlayerStats.cs" />

@@ -10,6 +10,7 @@ public class HUDController : MonoBehaviour
     public GameObject heart1, heart2, heart3;
     private SpriteRenderer heart1Sp, heart2Sp, heart3Sp;
     public Sprite fullHeart, HalfHeart, NoHeart;
+    public GameObject gameOverObject;
 
     public Text text, gameOver;
     float timeLeft = 180f;
@@ -66,8 +67,27 @@ public class HUDController : MonoBehaviour
     public void ExitGame()
     {
         pauseGame.SetActive(false);
-        SceneManager.LoadScene("GameOver");
+        gameObject.SetActive(true);
     }
+
+    public void BackToIntro()
+    {
+        SceneManager.LoadScene("Introduction", LoadSceneMode.Single);
+    }
+
+    public void PlayAgain()
+    {
+
+        gameObject.SetActive(false);
+        SceneManager.LoadScene("Classroom");
+    }
+
+
+    public void GameOver()
+    {
+        gameOverObject.SetActive(true);
+    }
+
 
     public void UpdateHealth(int health)
     {
@@ -135,11 +155,13 @@ public class HUDController : MonoBehaviour
                 if (waitTime <= 0)
                 {
                     gameOver.enabled = false;
-                    SceneManager.LoadScene("GameOver");
+                    GameOver();
                 }
                 return timeLeft;
             }
         }
         return timeLeft;
     }
+
+   
 }
