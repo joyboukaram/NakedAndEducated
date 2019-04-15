@@ -13,13 +13,14 @@ public class HUDController : MonoBehaviour
     public GameObject gameOverObject;
 
     public Text text, gameOver;
-    float timeLeft = 180f;
+    public float timeLeft = 180f;
     float waitTime = 3f;
 
     public Button continueGame, exitGame;
 
     public GameObject pauseGame;
     bool show;
+
 
     // Use this for initialization
     void Start()
@@ -137,7 +138,9 @@ public class HUDController : MonoBehaviour
         if (!PauseGame())
         {
             text.fontStyle = FontStyle.Bold;
+
             float a = 0.5f * Time.deltaTime;
+
             timeLeft -= a;
 
             text.text = "Time Left:" + Mathf.Round(timeLeft).ToString();

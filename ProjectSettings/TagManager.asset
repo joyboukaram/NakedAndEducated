@@ -9,6 +9,7 @@ TagManager:
   - HUD
   - Pause
   - Enemy
+  - Checkpoint
   layers:
   - Default
   - TransparentFX

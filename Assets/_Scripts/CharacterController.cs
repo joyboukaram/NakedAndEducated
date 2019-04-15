@@ -15,6 +15,9 @@ public class CharacterController : MonoBehaviour
     public GameObject pause;
     Animator playerAnimator;
 
+    public int duration;
+    float timePassed;
+
 
     // Start is called before the first frame update
     void Start()
@@ -51,22 +54,28 @@ public class CharacterController : MonoBehaviour
                 return;
             }
 
-            if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
+            if ((Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) && (speedVertical > 0 || speedHorizontal > 0))
             {
-                if (Sprint() > 0)
+                timePassed += Time.deltaTime;
+                Debug.Log(timePassed);
+                if (timePassed > duration)
                 {
+                    StopCoroutine(Faster(speedHorizontal, speedVertical));
 
-                    transform.Translate(new Vector3(speedHorizontal * shiftMaxSpeed, 0, speedVertical * shiftMaxSpeed));
-                    waitSprint = 5f;
                 }
+                else
+                    StartCoroutine(Faster(speedHorizontal, speedVertical));
             }
-            else
-                if (Sprint() <= 0)
+
+            if(timePassed > duration)
             {
                 waitSprint -= Time.deltaTime;
-
+                Debug.Log(waitSprint);
                 if (waitSprint <= 0)
-                    timeLeft = 3f;
+                {
+                    timePassed = 0;
+                    waitSprint = 0;
+                }
             }
 
 
@@ -92,8 +101,7 @@ public class CharacterController : MonoBehaviour
 
     private float Sprint()
     {
-        float a = 0.5f * Time.deltaTime;
-        timeLeft -= a;
+        timeLeft -= 0.5f * Time.deltaTime;
 
         if (timeLeft <= 0)
         {
@@ -111,5 +119,12 @@ public class CharacterController : MonoBehaviour
         playerAnimator.SetBool("goLeft", false);
         playerAnimator.SetBool("isWalking", false);
         playerAnimator.SetBool("isBackwards", false);
+    }
+
+    IEnumerator Faster(float speedHorizontal, float speedVertical)
+    {
+        transform.Translate(new Vector3(speedHorizontal * shiftMaxSpeed, 0, speedVertical * shiftMaxSpeed));
+
+        yield return null;
     }
 }
