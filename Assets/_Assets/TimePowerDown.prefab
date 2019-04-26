@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7690437309836571979}
   - component: {fileID: 7681848861490250055}
   - component: {fileID: 7694947224965780067}
+  - component: {fileID: 2417208379389977274}
   - component: {fileID: 7694947224965780066}
   m_Layer: 0
   m_Name: TimePowerDown
@@ -92,6 +93,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.16000003, y: 0.06746634, z: 0.08000001}
   m_Center: {x: 0, y: 0.033733148, z: 0}
+--- !u!114 &2417208379389977274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7694947224965780093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c319938e0b3974e8a946b4932c51b6c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 0}
 --- !u!114 &7694947224965780066
 MonoBehaviour:
   m_ObjectHideFlags: 0

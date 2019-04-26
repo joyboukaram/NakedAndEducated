@@ -23,7 +23,6 @@ public class EnemyController : MonoBehaviour
             PlayerStats playerStats = collider.GetComponent<PlayerStats>();
             playerStats.TakeDamage();
             Destroy(gameObject);
-
         }
     }
 }

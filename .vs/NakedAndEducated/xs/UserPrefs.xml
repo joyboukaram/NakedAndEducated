@@ -1,11 +1,7 @@
 ﻿<Properties StartupConfiguration="{2B6495A6-E0DA-025A-3B21-CC311A603593}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_Scripts/CheckpointController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_Scripts/BroaderField.cs">
     <Files>
-      <File FileName="Assets/_Scripts/CharacterController.cs" Line="57" Column="133" />
-      <File FileName="Assets/_Scripts/CheckpointController.cs" Line="11" Column="6" />
-      <File FileName="../CSC458_Tutorial/Unity Project/Assets/_Scripts/PlayerStats.cs" Line="1" Column="1" />
-      <File FileName="Assets/_Scripts/EnemyController.cs" Line="26" Column="13" />
-      <File FileName="Assets/_Scripts/BroaderField.cs" Line="25" Column="131" />
+      <File FileName="Assets/_Scripts/BroaderField.cs" Line="26" Column="17" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

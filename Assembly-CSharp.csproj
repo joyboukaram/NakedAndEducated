@@ -66,6 +66,7 @@
     <Compile Include="Assets\_Scripts\ClockAnim.cs" />
     <Compile Include="Assets\_Scripts\DecreaseTime.cs" />
     <Compile Include="Assets\_Scripts\EnemyController.cs" />
+    <Compile Include="Assets\_Scripts\EnemySight.cs" />
     <Compile Include="Assets\_Scripts\HUDController.cs" />
     <Compile Include="Assets\_Scripts\IntroScene.cs" />
     <Compile Include="Assets\_Scripts\PlayerStats.cs" />
