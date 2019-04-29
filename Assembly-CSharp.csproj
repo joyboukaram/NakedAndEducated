@@ -66,7 +66,6 @@
     <Compile Include="Assets\_Scripts\ClockAnim.cs" />
     <Compile Include="Assets\_Scripts\DecreaseTime.cs" />
     <Compile Include="Assets\_Scripts\EnemyController.cs" />
-    <Compile Include="Assets\_Scripts\EnemySight.cs" />
     <Compile Include="Assets\_Scripts\HUDController.cs" />
     <Compile Include="Assets\_Scripts\IntroScene.cs" />
     <Compile Include="Assets\_Scripts\PlayerStats.cs" />
@@ -115,6 +114,12 @@
     <Compile Include="Assets\Classroom\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
     <Compile Include="Assets\Classroom\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
     <Compile Include="Assets\Classroom\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
+    <Compile Include="Assets\PowerUp\Scripts\CustomizablePowerUp.cs" />
+    <Compile Include="Assets\PowerUp\Scripts\PowerUpManager.cs" />
+    <Compile Include="Assets\PowerUp\Scripts\PowerUpRotation.cs" />
+    <Compile Include="Assets\PowerUp\Scripts\ScaleParticles.cs" />
+    <Compile Include="Assets\PowerUp\Scripts\TakeablePowerUp.cs" />
+    <Compile Include="Assets\PowerUp\Scripts\Utility\Singleton.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />

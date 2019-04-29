@@ -32,6 +32,7 @@ public class DecreaseTime : MonoBehaviour
             timeDecreaseText.SetActive(true);
             HUDController hud = GameObject.Find("HUD").GetComponent<HUDController>();
             hud.timeLeft -= 20;
+            Destroy(gameObject);
         }
     }
 }

@@ -43,13 +43,15 @@ public class HUDController : MonoBehaviour
             PauseGame();
         }
 
+
+
     }
 
     public bool PauseGame()
     {
 
         if (show == true)
-        {  
+        {
             pauseGame.SetActive(true);
             return true;
         }
@@ -137,6 +139,7 @@ public class HUDController : MonoBehaviour
     {
         if (!PauseGame())
         {
+            CheckpointController checkpoint = GameObject.FindGameObjectWithTag("Checkpoint").GetComponent<CheckpointController>();
             text.fontStyle = FontStyle.Bold;
 
             float a = 0.5f * Time.deltaTime;
@@ -144,6 +147,16 @@ public class HUDController : MonoBehaviour
             timeLeft -= a;
 
             text.text = "Time Left:" + Mathf.Round(timeLeft).ToString();
+
+            if (timeLeft <= 120.1 && timeLeft >= 120)
+            {
+                checkpoint.timeDecreased();
+
+            }
+            else if(timeLeft <= 60.1 && timeLeft >= 60)
+            {
+                checkpoint.timeDecreased();
+            }
 
             if (timeLeft < 30 && timeLeft > 0)
                 text.color = new Color(139, 0, 0);
@@ -166,5 +179,5 @@ public class HUDController : MonoBehaviour
         return timeLeft;
     }
 
-   
+
 }

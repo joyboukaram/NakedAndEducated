@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -18,10 +19,14 @@ public class CharacterController : MonoBehaviour
     public int duration;
     float timePassed;
 
+    private AudioSource source;
+    public AudioClip hey;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        source = GetComponent<AudioSource>();
         shiftMaxSpeed = 15f;
         waitSprint = 5f;
         timeLeft = 3f;
@@ -67,7 +72,7 @@ public class CharacterController : MonoBehaviour
                     StartCoroutine(Faster(speedHorizontal, speedVertical));
             }
 
-            if(timePassed > duration)
+            if (timePassed > duration)
             {
                 waitSprint -= Time.deltaTime;
                 Debug.Log(waitSprint);
@@ -84,6 +89,7 @@ public class CharacterController : MonoBehaviour
             playerAnimator.SetFloat("horizontalSpeed", (speedHorizontal));
             transform.Translate(new Vector3(speedHorizontal * maxSpeed, 0, speedVertical * maxSpeed));
 
+            //source.Play();
 
 
 
@@ -124,6 +130,7 @@ public class CharacterController : MonoBehaviour
     IEnumerator Faster(float speedHorizontal, float speedVertical)
     {
         transform.Translate(new Vector3(speedHorizontal * shiftMaxSpeed, 0, speedVertical * shiftMaxSpeed));
+
 
         yield return null;
     }

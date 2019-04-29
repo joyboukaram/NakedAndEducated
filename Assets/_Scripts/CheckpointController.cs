@@ -34,4 +34,13 @@ public class CheckpointController : MonoBehaviour
         }
     }
 
+
+    public void timeDecreased()
+    {
+        foreach (GameObject G in checkpoints)
+        {
+            G.transform.localScale += new Vector3(0, 5, 5);
+        }
+    }
+
 }

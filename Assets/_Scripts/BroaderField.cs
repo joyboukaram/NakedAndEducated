@@ -26,7 +26,7 @@ public class BroaderField : MonoBehaviour
                 timePassed = 0;
             }
         }
-        Debug.Log(Broader.active);
+        //Debug.Log(Broader.active);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -36,6 +36,7 @@ public class BroaderField : MonoBehaviour
             Broader.SetActive(true);
             CheckpointController checkpoint = GameObject.FindGameObjectWithTag("Checkpoint").GetComponent<CheckpointController>();
             checkpoint.ChangeSize();
+            Destroy(gameObject);
            
         }
     }
