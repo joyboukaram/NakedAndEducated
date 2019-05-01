@@ -90,8 +90,13 @@ public class CharacterController : MonoBehaviour
             transform.Translate(new Vector3(speedHorizontal * maxSpeed, 0, speedVertical * maxSpeed));
 
             //source.Play();
-
-
+            CharacterSlower character = GetComponent<CharacterSlower>();
+            //if(character.slowerCharacter == true)
+            //{
+            //    transform.Translate(new Vector3(speedHorizontal * 2, 0, speedVertical * 2));
+            //    Debug.Log("hey");
+            //}
+            Debug.Log(character.slowerCharacter);
 
         }
 

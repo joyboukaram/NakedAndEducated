@@ -13,7 +13,7 @@ public class HUDController : MonoBehaviour
     public GameObject gameOverObject;
 
     public Text text, gameOver;
-    public float timeLeft = 180f;
+    public float timeLeft;
     float waitTime = 3f;
 
     public Button continueGame, exitGame;

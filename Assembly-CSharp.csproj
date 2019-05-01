@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="Assets\_Scripts\BroaderField.cs" />
     <Compile Include="Assets\_Scripts\CharacterController.cs" />
+    <Compile Include="Assets\_Scripts\CharacterSlower.cs" />
     <Compile Include="Assets\_Scripts\CheckpointController.cs" />
     <Compile Include="Assets\_Scripts\ClockAnim.cs" />
     <Compile Include="Assets\_Scripts\DecreaseTime.cs" />
