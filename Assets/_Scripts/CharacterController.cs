@@ -9,6 +9,7 @@ public class CharacterController : MonoBehaviour
 
     public float maxSpeed;
     private HUDController hud;
+    public bool isVisible;
     public float rotationspeed;
     public float shiftMaxSpeed;
     float timeLeft;
@@ -96,7 +97,7 @@ public class CharacterController : MonoBehaviour
             //    transform.Translate(new Vector3(speedHorizontal * 2, 0, speedVertical * 2));
             //    Debug.Log("hey");
             //}
-            Debug.Log(character.slowerCharacter);
+//            Debug.Log(character.slowerCharacter);
 
         }
 
