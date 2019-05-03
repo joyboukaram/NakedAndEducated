@@ -175,7 +175,27 @@ ModelImporter:
     13700002: Boy01_Brows_Geo
     13700004: Boy01_Eyes_Geo
     13700006: h_Geo
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Boy01_FacialAnimMap
+    second: {fileID: 2800000, guid: 0e095f916dc53c24faddbe07aa6fd533, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Boy01_diffuse
+    second: {fileID: 2800000, guid: bd91833149e13b9468be2e8765cb2b27, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Boy01_normal
+    second: {fileID: 2800000, guid: 3041ca83bc8f7a148b4660b8b5a24354, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Boy01_spec
+    second: {fileID: 2800000, guid: 2a53e7b2afacd4d488fa12cda3d19401, type: 3}
   materials:
     importMaterials: 1
     materialName: 0
