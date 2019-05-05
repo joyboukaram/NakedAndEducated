@@ -13082,8 +13082,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HUD: {fileID: 614582218}
   player: {fileID: 1529531827}
-  playagain: {fileID: 402156307}
-  exit: {fileID: 450747445}
   victory: 0
   audioClip: {fileID: 8300000, guid: 8fa73e6dc90fd4d0681d8d5ef7d8de8b, type: 3}
 --- !u!82 &655167433
@@ -26857,7 +26855,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HUD: {fileID: 614582218}
-  player: {fileID: 0}
+  player: {fileID: 1529531827}
 --- !u!114 &1529531831
 MonoBehaviour:
   m_ObjectHideFlags: 0
