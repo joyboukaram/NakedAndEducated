@@ -11,7 +11,7 @@ public class HUDController : MonoBehaviour
     private SpriteRenderer heart1Sp, heart2Sp, heart3Sp;
     public Sprite fullHeart, HalfHeart, NoHeart;
     public GameObject gameOverObject;
-
+    public GameObject particles;
     public Text text, gameOver;
     public float timeLeft;
     float waitTime = 3f;
@@ -30,6 +30,7 @@ public class HUDController : MonoBehaviour
         heart3Sp = heart3.GetComponent<SpriteRenderer>();
         gameOver.enabled = false;
         show = false;
+        particles.SetActive(false);
     }
 
     // Update is called once per frame

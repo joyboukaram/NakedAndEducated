@@ -108,6 +108,8 @@
      <Compile Include="Assets\Classroom\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
      <Compile Include="Assets\Classroom\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
      <Compile Include="Assets\Classroom\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
+     <Compile Include="Assets\Invisibility.cs" />
+     <Compile Include="Assets\ParentParticles.cs" />
      <Compile Include="Assets\Pixelate\Pixelate.cs" />
      <Compile Include="Assets\PowerUp\Scripts\CustomizablePowerUp.cs" />
      <Compile Include="Assets\PowerUp\Scripts\PowerUpManager.cs" />

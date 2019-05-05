@@ -122,7 +122,7 @@ public class CharacterController : MonoBehaviour
         }
         return timeLeft;
     }
-
+    
     void FreezePosition()
     {
         transform.Rotate(0, 0, 0);
@@ -139,5 +139,11 @@ public class CharacterController : MonoBehaviour
 
 
         yield return null;
+    }
+    public void setVisible(){
+        isVisible = true;
+    }
+    public void setInv(){
+        isVisible = false;
     }
 }
