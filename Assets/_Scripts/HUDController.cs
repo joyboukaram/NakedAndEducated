@@ -10,15 +10,16 @@ public class HUDController : MonoBehaviour
     public GameObject heart1, heart2, heart3;
     private SpriteRenderer heart1Sp, heart2Sp, heart3Sp;
     public Sprite fullHeart, HalfHeart, NoHeart;
-    public GameObject gameOverObject;
+    public GameObject gameOverObject, VictoryObject;
     public GameObject particles;
     public Text text, gameOver;
     public float timeLeft;
     float waitTime = 3f;
 
     public Button continueGame, exitGame;
+    public Button playagain, exit;
 
-    public GameObject pauseGame;
+    public GameObject pauseGame, finished;
     bool show;
 
 
@@ -72,6 +73,7 @@ public class HUDController : MonoBehaviour
     {
         pauseGame.SetActive(false);
         gameObject.SetActive(true);
+        SceneManager.LoadScene("Introduction", LoadSceneMode.Single);
     }
 
     public void BackToIntro()
@@ -92,6 +94,10 @@ public class HUDController : MonoBehaviour
         gameOverObject.SetActive(true);
     }
 
+    public void Victory()
+    {
+        finished.SetActive(true);
+    }
 
     public void UpdateHealth(int health)
     {

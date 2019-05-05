@@ -25,16 +25,6 @@ public class CheckpointController : MonoBehaviour
                 G.SetActive(true);
         }
     }
-
-    public void ChangeSize()
-    {
-        foreach (GameObject G in checkpoints)
-        {
-            G.transform.localScale += new Vector3(50, 0, 50);
-        }
-    }
-
-
     public void timeDecreased()
     {
         foreach (GameObject G in checkpoints)

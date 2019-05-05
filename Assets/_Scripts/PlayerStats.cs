@@ -9,10 +9,12 @@ public class PlayerStats : MonoBehaviour
     public GameObject HUD;
     public GameObject player;
 
+
     // Start is called before the first frame update
     void Start()
     {
         health = 6;
+
 
     }
 
@@ -27,7 +29,6 @@ public class PlayerStats : MonoBehaviour
         HUD.GetComponent<HUDController>().UpdateHealth(health);
         if (health == 0)
         {
-            //SceneManager.LoadScene("GameOver");
             player.GetComponent<Animator>().enabled = false;
             player.GetComponent<CharacterController>().enabled = false;
             HUD.GetComponent<HUDController>().enabled = false;
@@ -38,5 +39,9 @@ public class PlayerStats : MonoBehaviour
        
 
     }
+
+   
+
+
 
 }

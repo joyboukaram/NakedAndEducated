@@ -4,22 +4,18 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
+
+
     // Start is called before the first frame update
     void Start()
     {
+
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        //HUDController hud = GetComponent<HUDController>();
-
-        //if(hud.timeLeft <= 120 && hud.timeLeft >= 60)
-        //{
-        //    CheckpointController checkpoint = GameObject.FindGameObjectWithTag("Checkpoint").GetComponent<CheckpointController>();
-        //    checkpoint.ChangeSize();
-        //}
     }
 
     private void OnTriggerEnter(Collider collider)
@@ -31,4 +27,6 @@ public class EnemyController : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+ 
 }
