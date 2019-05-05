@@ -22,6 +22,8 @@ public class HUDController : MonoBehaviour
     public GameObject pauseGame, finished;
     bool show;
 
+    public GameObject player;
+
 
     // Use this for initialization
     void Start()
@@ -92,6 +94,7 @@ public class HUDController : MonoBehaviour
     public void GameOver()
     {
         gameOverObject.SetActive(true);
+        Destroy(player.GetComponent<CharacterController>().source);
     }
 
     public void Victory()
