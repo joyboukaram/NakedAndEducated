@@ -31657,8 +31657,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isVisible: 1
   rotationspeed: 10
-  maxSpeed: 5
-  shiftMaxSpeed: 10
+  maxSpeed: 10
+  shiftMaxSpeed: 15
   pause: {fileID: 554680747}
   duration: 3
   source: {fileID: 0}
