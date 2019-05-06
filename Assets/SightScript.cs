@@ -5,8 +5,7 @@ using UnityEngine;
 public class SightScript : MonoBehaviour
 {
     
-    public GameObject Parent;
-    public GameObject DeathAnim;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,8 +22,7 @@ public class SightScript : MonoBehaviour
             {
                 PlayerStats playerStats = collider.GetComponent<PlayerStats>();
                 playerStats.TakeDamage();
-                Destroy(Parent);
-                DeathAnim.SetActive(true);
+
             }
     }
 }
