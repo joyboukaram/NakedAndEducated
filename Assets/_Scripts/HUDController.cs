@@ -24,6 +24,8 @@ public class HUDController : MonoBehaviour
 
     public GameObject player;
 
+    GameObject[] enemy, fov;
+
 
     // Use this for initialization
     void Start()
@@ -34,6 +36,8 @@ public class HUDController : MonoBehaviour
         gameOver.enabled = false;
         show = false;
         particles.SetActive(false);
+        enemy = GameObject.FindGameObjectsWithTag("Enemy");
+        fov = GameObject.FindGameObjectsWithTag("FOV");
     }
 
     // Update is called once per frame
@@ -53,14 +57,46 @@ public class HUDController : MonoBehaviour
 
     public bool PauseGame()
     {
-
+        CharacterController characterController = GameObject.Find("Player").GetComponent<CharacterController>();
         if (show == true)
         {
             pauseGame.SetActive(true);
+            characterController.source.Pause();
+            characterController.enabled = false;
+            GameObject.Find("Player").GetComponent<Animator>().enabled = false;
+
+            foreach(GameObject C in enemy)
+            {
+                C.GetComponent<Animator>().enabled = false;
+                C.GetComponent<EnemyScript>().enabled = false;
+            }
+
+            foreach (GameObject A in fov)
+            {
+
+                A.GetComponent<SightScript>().enabled = false;
+            }
+
             return true;
         }
 
         pauseGame.SetActive(false);
+
+        GameObject.Find("Player").GetComponent<Animator>().enabled = true;
+        characterController.enabled = true;
+
+        foreach (GameObject C in enemy)
+        {
+            C.GetComponent<Animator>().enabled = true;
+            C.GetComponent<EnemyScript>().enabled = true;
+        }
+
+        foreach (GameObject A in fov)
+        {
+
+            A.GetComponent<SightScript>().enabled = false;
+        }
+
         return false;
 
     }
@@ -94,7 +130,7 @@ public class HUDController : MonoBehaviour
     public void GameOver()
     {
         gameOverObject.SetActive(true);
-        Destroy(player.GetComponent<CharacterController>().source);
+
     }
 
     public void Victory()

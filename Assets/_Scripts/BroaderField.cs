@@ -5,15 +5,15 @@ using UnityEngine.UI;
 
 public class BroaderField : MonoBehaviour
 {
-    public int i = 50;
+
     public GameObject Broader;
     float timePassed;
     float new_timePassed;
-    bool bigger;
+
     public Material newMat;
 
     SphereCollider sphere;
-     public AudioClip audioClip;
+    public AudioClip audioClip;
     private AudioSource audio;
     // Start is called before the first frame update
     void Start()
@@ -34,10 +34,6 @@ public class BroaderField : MonoBehaviour
                 timePassed = 0;
             }
         }
-
-
-      
-
     }
 
     private void OnTriggerEnter(Collider other)
@@ -45,11 +41,19 @@ public class BroaderField : MonoBehaviour
         
         if (other.tag == "Player")
         {
+            audio.Play();
             other.GetComponent<PlayerStats>().TakeDamage();
-            Destroy(gameObject);
+            StartCoroutine("DestroyGameObject");
+
 
         }
 
+    }
+
+    IEnumerator DestroyGameObject()
+    {
+        yield return new WaitForSeconds(1);
+        Destroy(gameObject);
     }
 }
 
