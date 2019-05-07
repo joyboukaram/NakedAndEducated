@@ -7,9 +7,11 @@ public class KillEnemy : MonoBehaviour
     private GameObject closest;
     private bool destroy = false;
     public float time = 2f;
+    private AudioSource audio;
     // Start is called before the first frame update
     void Start()
     {
+        audio = GetComponent<AudioSource>();
         GameObject[] enemy = GameObject.FindGameObjectsWithTag("Enemy");
         int i =0;
         float min =0;
@@ -43,6 +45,7 @@ public class KillEnemy : MonoBehaviour
      private void OnTriggerEnter(Collider collider){
         if(collider.tag =="Player" && destroy == false)
             {
+            audio.Play();
                 closest.transform.GetChild(0).gameObject.SetActive(false);
                 closest.transform.GetChild(1).gameObject.SetActive(false);
                 closest.transform.GetChild(2).gameObject.SetActive(false);

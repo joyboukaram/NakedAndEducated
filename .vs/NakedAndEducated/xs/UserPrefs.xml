@@ -1,12 +1,9 @@
 ﻿<Properties StartupConfiguration="{2B6495A6-E0DA-025A-3B21-CC311A603593}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_Scripts/DoorController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/KillEnemy.cs">
     <Files>
-      <File FileName="Assets/EnemyScript.cs" Line="47" Column="63" />
-      <File FileName="Assets/SightScript.cs" Line="25" Column="17" />
-      <File FileName="Assets/_Scripts/BroaderField.cs" Line="56" Column="29" />
-      <File FileName="Assets/_Scripts/DecreaseTime.cs" Line="1" Column="1" />
-      <File FileName="Assets/_Scripts/HUDController.cs" Line="60" Column="13" />
-      <File FileName="Assets/_Scripts/DoorController.cs" Line="39" Column="72" />
+      <File FileName="Assets/SightScript.cs" Line="35" Column="29" />
+      <File FileName="Assets/Death.cs" Line="1" Column="1" />
+      <File FileName="Assets/KillEnemy.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

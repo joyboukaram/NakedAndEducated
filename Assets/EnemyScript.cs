@@ -10,11 +10,14 @@ public class EnemyScript : MonoBehaviour
     private float origin = 0f;
 
     Animator enemyAnimator;
+
+
     // Start is called before the first frame update
     void Start()
     {
         origin = angle;
         angle = getNewAngle();
+
     }
 
     // Update is called once per frame
