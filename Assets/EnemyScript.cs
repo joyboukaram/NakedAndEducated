@@ -4,61 +4,44 @@ using UnityEngine;
 
 public class EnemyScript : MonoBehaviour
 {
-    private float randomAngle = 0f;
+    private float angle = 0f;
     public float turnSpeed;
     private float fov = 160f;
-    private float next_angle;
-    public float variation_index;
-    private float wait_time = 2f;
-    private bool wait = true;
+    private float origin = 0f;
 
     Animator enemyAnimator;
     // Start is called before the first frame update
     void Start()
     {
-        next_angle = getNewAngle();
-        enemyAnimator = GetComponent<Animator>();
+        angle = getNewAngle();
+        origin = angle;
     }
 
     // Update is called once per frame
     void Update()
     {
-        changeAngle();
-        //change next angle according to timepassed using cha
-    }
-    void changeAngle()
-    {
-        float num = next_angle - transform.eulerAngles.y;
-        //    Debug.Log("Next Angle"+num);
-        if (next_angle < transform.eulerAngles.y - 1 && next_angle > transform.eulerAngles.y + 1)
-        {
-            wait_time = wait_time - Time.deltaTime;
-            if (wait_time == 0)
-            {
-                //    wait = false;
-                wait_time = 2f;
-                next_angle = getNewAngle();
+//        Debug.Log(angle+" euler: "+gameObject.transform.eulerAngles.y);
+        if(angle<=gameObject.transform.eulerAngles.y+3 && angle>=gameObject.transform.eulerAngles.y-3){
+            origin = angle;
+            angle = getNewAngle();
             }
-        }
-        else
-        {
-
-            if (next_angle < transform.eulerAngles.y)
-                gameObject.transform.Rotate(0, -turnSpeed, 0);
-            if (next_angle > transform.eulerAngles.y)
-                gameObject.transform.Rotate(0, +turnSpeed, 0);
-            //         if(next_angle == transform.rotation.y)
-            //            {
-            //            wait=true;
-            //            }
+        else {
+        if(origin-angle>180)
+        gameObject.transform.Rotate(0,returnSign(angle)*0.1f*turnSpeed,0);
+        else gameObject.transform.Rotate(0,returnSign(angle)*0.1f*turnSpeed,0);
+        
         }
     }
-    static float getNewAngle()
+    float getNewAngle()
     {
-        float newangle = 160 * Random.value - 90;
+        float newangle = fov * Random.value;
         return newangle;
 
     }
-
+    float returnSign(float angle){
+        if (angle-80>0)
+            return 1;
+        else return -1;
+    }
   
 }
