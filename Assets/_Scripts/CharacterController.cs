@@ -17,6 +17,7 @@ public class CharacterController : MonoBehaviour
     float timeLeft;
     float waitSprint;
     public GameObject pause;
+
     Animator playerAnimator;
 
     public int duration;

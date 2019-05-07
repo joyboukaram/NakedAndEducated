@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyScript : MonoBehaviour
 {
+    
+
     private float randomAngle = 0f;
     public float turnSpeed;
     private float fov = 160f;
@@ -11,10 +13,13 @@ public class EnemyScript : MonoBehaviour
     public float variation_index;
     private float wait_time = 2f;
     private bool wait = true;
+
+    Animator enemyAnimator;
     // Start is called before the first frame update
     void Start()
     {
         next_angle =getNewAngle();
+        enemyAnimator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
