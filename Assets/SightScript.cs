@@ -22,7 +22,6 @@ public class SightScript : MonoBehaviour
             {
                 PlayerStats playerStats = collider.GetComponent<PlayerStats>();
                 playerStats.TakeDamage();
-
             }
     }
 }

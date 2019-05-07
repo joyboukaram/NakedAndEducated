@@ -37,7 +37,6 @@ public class TimeBonus : MonoBehaviour
         if (bigger == true)
         {
             new_timePassed += Time.deltaTime;
-            Debug.Log(new_timePassed);
             sphere.enabled = false;
             if (new_timePassed >= 0.7f)
             {

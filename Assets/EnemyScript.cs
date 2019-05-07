@@ -7,13 +7,14 @@ public class EnemyScript : MonoBehaviour
     private float randomAngle = 0f;
     public float turnSpeed;
     private float fov = 160f;
-    private float next_angle = 45;
+    private float next_angle;
     public float variation_index;
-    
+    private float wait_time = 2f;
+    private bool wait = true;
     // Start is called before the first frame update
     void Start()
     {
-        
+        next_angle =getNewAngle();
     }
 
     // Update is called once per frame
@@ -23,11 +24,31 @@ public class EnemyScript : MonoBehaviour
         //change next angle according to timepassed using cha
     }
     void changeAngle(){
-    gameObject.transform.Rotate(0,turnSpeed,0);
-        float randomNumber = Random.value*1000/variation_index;
-        if(randomNumber == 1)
-            {
-                gameObject.transform.Rotate(0,turnSpeed,0);
-            }
+    float num = next_angle-transform.eulerAngles.y;
+//    Debug.Log("Next Angle"+num);
+    if(next_angle < transform.eulerAngles.y-1 && next_angle > transform.eulerAngles.y+1){
+    wait_time= wait_time-Time.deltaTime;
+    if(wait_time==0){
+//    wait = false;
+    wait_time =2f;
+    next_angle = getNewAngle();
     }
+    }
+    else{
+       
+        if(next_angle <transform.eulerAngles.y)
+            gameObject.transform.Rotate(0,-turnSpeed,0);
+        if(next_angle >transform.eulerAngles.y)
+            gameObject.transform.Rotate(0,+turnSpeed,0);
+//         if(next_angle == transform.rotation.y)
+//            {
+//            wait=true;
+//            }
+    }}
+    static float getNewAngle(){
+        float newangle = 160*Random.value-90;
+        return newangle;
+    
+    }
+
 }
