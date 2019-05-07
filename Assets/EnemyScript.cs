@@ -13,8 +13,8 @@ public class EnemyScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        angle = getNewAngle();
         origin = angle;
+        angle = getNewAngle();
     }
 
     // Update is called once per frame
