@@ -36,22 +36,7 @@ public class BroaderField : MonoBehaviour
         }
 
 
-        if (bigger == true)
-        {
-            new_timePassed += Time.deltaTime;
-            sphere.enabled = false;
-            if (new_timePassed >= 5)
-            {   
-                
-                GameObject[] enemy = GameObject.FindGameObjectsWithTag("FOV");
-                bigger = false;
-                foreach (GameObject C in enemy)
-                {
-                    C.GetComponent<EnemyController>();
-                    C.transform.localScale = new Vector3(100.2f, 1.2f, 1f);
-                }
-            }
-        }
+      
 
     }
 
@@ -60,21 +45,8 @@ public class BroaderField : MonoBehaviour
         
         if (other.tag == "Player")
         {
-
-            bigger = true;
-            audio.clip = audioClip;
-            audio.Play();
-            Broader.SetActive(true);
-            GameObject[] enemy = GameObject.FindGameObjectsWithTag("FOV");
-
-            foreach (GameObject C in enemy)
-            {   C.GetComponent<Renderer>().material = newMat;
-                C.GetComponent<EnemyController>();
-
-                C.transform.localScale += new Vector3(0.2f, 0,0.01f);
-
-               
-            }
+            other.GetComponent<PlayerStats>().TakeDamage();
+            Destroy(gameObject);
 
         }
 
