@@ -5,6 +5,8 @@ using UnityEngine;
 public class KillEnemy : MonoBehaviour
 {
     private GameObject closest;
+    private bool destroy = false;
+    public float time = 2f;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,19 +29,25 @@ public class KillEnemy : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        
+    {   
+        if(destroy){
+            if(time <= 0){
+                Destroy(closest);
+                Destroy(gameObject);
+            }
+            else{
+            time = time - Time.deltaTime;
+            }
+        }
     }
      private void OnTriggerEnter(Collider collider){
-        if(collider.tag =="Player")
+        if(collider.tag =="Player" && destroy == false)
             {
-                Destroy(gameObject);
                 closest.transform.GetChild(0).gameObject.SetActive(false);
                 closest.transform.GetChild(1).gameObject.SetActive(false);
                 closest.transform.GetChild(2).gameObject.SetActive(false);
                 closest.transform.GetChild(3).gameObject.SetActive(true);
-                closest.transform.GetChild(4).gameObject.SetActive(true);
-                Destroy(closest);
+                destroy = true;
             }
     }
     void kill(){
