@@ -53,7 +53,7 @@ public class BroaderField : MonoBehaviour
     IEnumerator DestroyGameObject()
     {
         yield return new WaitForSeconds(1);
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 }
 

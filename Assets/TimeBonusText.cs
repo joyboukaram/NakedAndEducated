@@ -17,7 +17,7 @@ public class TimeBonusText : MonoBehaviour
         timePassed += Time.deltaTime;
             if (timePassed >= 1.5f)
             {
-                Destroy(gameObject);
-            }
+            gameObject.SetActive(false);
+        }
     }
 }

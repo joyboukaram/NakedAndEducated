@@ -22,6 +22,8 @@ public class HUDController : MonoBehaviour
     public GameObject pauseGame, finished;
     bool show;
 
+
+
     public GameObject player;
 
     GameObject[] enemy, fov;
@@ -130,6 +132,7 @@ public class HUDController : MonoBehaviour
     public void GameOver()
     {
         gameOverObject.SetActive(true);
+
 
     }
 

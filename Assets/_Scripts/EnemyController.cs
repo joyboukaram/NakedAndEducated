@@ -25,7 +25,7 @@ public class EnemyController : MonoBehaviour
 
             if(new_timePassed >= 2)
             {
-                Destroy(gameObject);
+                gameObject.SetActive(false);
                 new_timePassed = 0;
             }
         }

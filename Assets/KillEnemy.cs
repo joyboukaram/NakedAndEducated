@@ -34,8 +34,8 @@ public class KillEnemy : MonoBehaviour
     {   
         if(destroy){
             if(time <= 0){
-                Destroy(closest);
-                Destroy(gameObject);
+                closest.SetActive(false);
+                gameObject.SetActive(false);
             }
             else{
             time = time - Time.deltaTime;

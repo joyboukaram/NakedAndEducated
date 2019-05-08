@@ -24,8 +24,8 @@ public class SightScript : MonoBehaviour
         {
             
             CharacterController player = GameObject.Find("Player").GetComponent<CharacterController>();
-            if(player.isVisible){
-            audio.Play();
+if(player.isVisible){
+            
             PlayerStats playerStats = collider.GetComponent<PlayerStats>();
             playerStats.TakeDamage();}
             StartCoroutine(DestroyEnemy());
@@ -33,10 +33,13 @@ public class SightScript : MonoBehaviour
     }
 
     IEnumerator DestroyEnemy()
-    { 
+    {
+        audio.Play();
         CharacterController player = GameObject.Find("Player").GetComponent<CharacterController>();
           player.isVisible = false;
         yield return new WaitForSeconds(1);
- 
+        gameObject.SetActive(false);
+        yield return null;
+
     }
 }

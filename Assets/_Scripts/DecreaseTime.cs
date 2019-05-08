@@ -39,7 +39,7 @@ public class DecreaseTime : MonoBehaviour
             sphere.enabled = false;
             if (new_timePassed >= 0.7f)
             {
-                Destroy(gameObject);
+                gameObject.SetActive(false);
                 bigger = false;
 
             }

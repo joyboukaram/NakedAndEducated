@@ -40,11 +40,12 @@ public class Invisibility : MonoBehaviour
         if (bigger == true)
         {
             new_timePassed += Time.deltaTime;
-//            Debug.Log(new_timePassed);
+
+
             sphere.enabled = false;
             if (new_timePassed >= 0.7f)
             {
-                Destroy(gameObject);
+                gameObject.SetActive(false);
                 bigger = false;
               
             }
@@ -56,6 +57,7 @@ public class Invisibility : MonoBehaviour
     
         if (other.tag == "Player")
         {
+
             bigger = true;
             audio.clip = audioClip;
             audio.Play();
@@ -63,6 +65,7 @@ public class Invisibility : MonoBehaviour
             CharacterController player = GameObject.Find("Player").GetComponent<CharacterController>();
             player.isVisible = false;
             InvText.SetActive(true);
+
            
         }
     }
