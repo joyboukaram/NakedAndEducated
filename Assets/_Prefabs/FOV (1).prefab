@@ -5057,7 +5057,7 @@ ParticleSystem:
 --- !u!199 &4588740430743776056
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -11591,7 +11591,7 @@ ParticleSystem:
 --- !u!199 &4588740431954383877
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -16351,7 +16351,7 @@ ParticleSystem:
 --- !u!199 &4588740432020473070
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -21181,7 +21181,7 @@ ParticleSystem:
 --- !u!199 &4588740432305590077
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -21555,7 +21555,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4588740432648000737
 Transform:
   m_ObjectHideFlags: 0
@@ -21627,6 +21627,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 206f2f7e529be9c4c93d9ca228ee0423, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioClip: {fileID: 0}
 --- !u!64 &4588740432648000743
 MeshCollider:
   m_ObjectHideFlags: 0

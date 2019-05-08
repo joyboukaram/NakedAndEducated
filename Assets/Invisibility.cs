@@ -5,6 +5,7 @@ using UnityEngine;
 public class Invisibility : MonoBehaviour
 { 
     public GameObject ParticleParent;
+    public GameObject InvText;
     float timePassed;
     public float duration;
     bool bigger;
@@ -30,13 +31,16 @@ public class Invisibility : MonoBehaviour
             {
                 ParticleParent.SetActive(false);
                 timePassed = 0;
+                CharacterController player = GameObject.Find("Player").GetComponent<CharacterController>();
+                player.isVisible = true;
+                      InvText.SetActive(false);
             }
         }
 
         if (bigger == true)
         {
             new_timePassed += Time.deltaTime;
-            Debug.Log(new_timePassed);
+//            Debug.Log(new_timePassed);
             sphere.enabled = false;
             if (new_timePassed >= 0.7f)
             {
@@ -58,7 +62,7 @@ public class Invisibility : MonoBehaviour
             ParticleParent.SetActive(true);
             CharacterController player = GameObject.Find("Player").GetComponent<CharacterController>();
             player.isVisible = false;
-
+            InvText.SetActive(true);
            
         }
     }

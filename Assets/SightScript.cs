@@ -22,16 +22,21 @@ public class SightScript : MonoBehaviour
     {
         if (collider.tag == "Player")
         {
+            
+            CharacterController player = GameObject.Find("Player").GetComponent<CharacterController>();
+            if(player.isVisible){
             audio.Play();
             PlayerStats playerStats = collider.GetComponent<PlayerStats>();
-            playerStats.TakeDamage();
+            playerStats.TakeDamage();}
             StartCoroutine(DestroyEnemy());
         }
     }
 
     IEnumerator DestroyEnemy()
-    {
+    { 
+        CharacterController player = GameObject.Find("Player").GetComponent<CharacterController>();
+          player.isVisible = false;
         yield return new WaitForSeconds(1);
-        Destroy(gameObject);
+ 
     }
 }
