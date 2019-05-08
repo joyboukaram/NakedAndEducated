@@ -5,6 +5,7 @@ using UnityEngine;
 public class KillEnemy : MonoBehaviour
 {
     private GameObject closest;
+    public GameObject text;
     private bool destroy = false;
     public float time = 2f;
     private AudioSource audio;
@@ -51,6 +52,7 @@ public class KillEnemy : MonoBehaviour
                 closest.transform.GetChild(2).gameObject.SetActive(false);
                 closest.transform.GetChild(3).gameObject.SetActive(true);
                 destroy = true;
+                text.SetActive(true);
             }
     }
     void kill(){

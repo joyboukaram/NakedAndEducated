@@ -36,9 +36,10 @@ if(player.isVisible){
     {
         audio.Play();
         CharacterController player = GameObject.Find("Player").GetComponent<CharacterController>();
-          player.isVisible = false;
+        player.isVisible = false;
         yield return new WaitForSeconds(1);
         gameObject.SetActive(false);
+        player.isVisible = true;
         yield return null;
 
     }

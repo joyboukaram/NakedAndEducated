@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1044382861}
   - component: {fileID: 2721844722434508703}
   m_Layer: 0
-  m_Name: EnemySightPowerDown
+  m_Name: KillEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -105,6 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f544e1306ffb1b46a5d0d9763c34946, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 3403161045217148450, guid: 557eb15e93ae55d4c91979fedc439f34, type: 3}
   time: 2
 --- !u!1001 &5578169912726627765
 PrefabInstance:
